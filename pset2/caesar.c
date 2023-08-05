@@ -3,9 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-int main(int argc, string argv[])
+int main(int argumento, string argv[])
 {//valida o dado
-    if (argc != 2){
+    if (argumento != 2){
         printf("argumento: !\n");
         return 1;
     }
