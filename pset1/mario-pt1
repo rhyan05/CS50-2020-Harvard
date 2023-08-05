@@ -1,0 +1,32 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    void piramide(int n);
+    int altura = 0;
+    // solicitar a altura da piramide
+    {
+        altura = get_int("altura da piramide: ");
+    }
+    while (!(altura >= 1 && altura <= 8));
+    
+    piramide(altura);
+}
+
+// gerando piramide
+void piramide(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int a = n - i - 2; a >= 0; a--)
+        {
+            printf(" ");
+        }        
+        for (int j = 0; j <= i; j++)
+        {
+            printf("#");
+            printf("\n");
+        }    
+    }
+}
