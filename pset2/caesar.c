@@ -3,14 +3,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-int main(int argumento, string argv[])
+int main(int argumento, string list_arg[])
 {//valida o dado
     if (argumento != 2){
         printf("argumento: !\n");
         return 1;
     }
     //modulo
-    string k = argv[1];
+    string k = list_arg[1];
     for(int i = 0, n = strlen(k); i < n; i++){
         if (k[i] < 48 || k[i] > 57){
             printf("Numero: \n");
