@@ -1,0 +1,42 @@
+#include <cs50.h>
+#include <stdio.h>
+
+void gerarblock(int altura)
+{
+    for (int a = 0; a < altura; a++)
+    {
+        //espaço vazio
+        for (int k = (altura - 1); k > a; k--)
+        {
+            printf(" ");
+        }
+
+        // brick left side
+        for (int k = 0; k <= a; k++)
+        {
+            printf("#");
+        }
+
+        // the gap
+        printf("  ");
+
+        // brick right side
+        for (int k = 0; k <= a; k++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+
+
+int main(void)
+{
+    int alt;
+    do
+    {
+        alt = get_int("altura: ");
+    }
+    while (alt > 8 || alt <= 0);
+    gerarblock(alt);
+}
