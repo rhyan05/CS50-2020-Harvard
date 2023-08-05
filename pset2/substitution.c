@@ -28,7 +28,7 @@ int main(int argumento, string list_arg[])
     }
 
     for(int i = 0; i <= n; i++){
-        for(int p = 1; i + p <= n; p++)
+        for(int d = 1; i + d <= n; d++)
             if (k[i] == k[i + p]){//guarda dados para comparaçao
                 printf("Não repetir\n");
                 return 1;
@@ -37,7 +37,7 @@ int main(int argumento, string list_arg[])
 
     string plaintext = get_string("plain_text: ");
     
-    for(int i = 0, b = strlen(plaintext); i < b; i++){
+    for(int i = 0, c = strlen(plaintext); i < c; i++){
         if (plaintext[i] > 64 && plaintext[i] < 91){
             plaintext[i] = k[plaintext[i] - 'A'];            
         }else if(plaintext[i] > 96 && plaintext[i] < 123){
